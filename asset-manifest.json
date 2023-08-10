@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GSG-Project1/static/css/main.b3710867.css",
+    "main.js": "/GSG-Project1/static/js/main.c98822b3.js",
+    "index.html": "/GSG-Project1/index.html",
+    "main.b3710867.css.map": "/GSG-Project1/static/css/main.b3710867.css.map",
+    "main.c98822b3.js.map": "/GSG-Project1/static/js/main.c98822b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b3710867.css",
+    "static/js/main.c98822b3.js"
+  ]
+}
