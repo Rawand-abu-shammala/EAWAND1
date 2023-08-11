@@ -1,14 +1,14 @@
-import { Navigate, Outlet } from 'react-router-dom';
-import LoginPage from '../Login/Login';
-import SignupPage from '../Signup/Signup';
-import HomePage from '../Home/Home';
-import ProfilePage from '../Profile/Profile';
-import AdminPage from '../Admin/Admin';
+// import { Navigate, Outlet } from 'react-router-dom';
+// import LoginPage from '../Login/Login';
+// import SignupPage from '../Signup/Signup';
+// import HomePage from '../Home/Home';
+// import ProfilePage from '../Profile/Profile';
+// import AdminPage from '../Admin/Admin';
 
 // import { PATHS } from './router';
-import AdminGuard from '../components/Guards/AdminGuard';
-import GuestGuard from '../components/Guards/GuestGuard';
-import UserGuard from '../homee/Home';
+// import AdminGuard from '../components/Guards/AdminGuard';
+// import GuestGuard from '../components/Guards/GuestGuard';
+// import UserGuard from '../homee/Home';
 
 // const routes = (role) => [
   // Guest pages
@@ -70,20 +70,24 @@ import UserGuard from '../homee/Home';
 // export default routes;
 
 
+
+
+
+
 // paths.js
 
-export const PATHS = {
-    HOME: '/',
-    AUTH: {
-      LOGIN: '/auth/login',
-      SIGNUP: '/auth/signup',
-    },
-    PROFILE: '/profile',
-    ADMIN: {
-      ROOT: '/admin',
-      USERS: '/admin/users',
-    },
-  };
+// export const PATHS = {
+//     HOME: '/',
+//     AUTH: {
+//       LOGIN: '/auth/login',
+//       SIGNUP: '/auth/signup',
+//     },
+//     PROFILE: '/profile',
+//     ADMIN: {
+//       ROOT: '/admin',
+//       USERS: '/admin/users',
+//     },
+//   };
   
   // export default PATHS;
   

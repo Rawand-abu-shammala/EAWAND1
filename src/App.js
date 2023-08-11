@@ -1,30 +1,30 @@
-import Navbar from "./components/Navbar/Navbar";
+// import Navbar from "./components/Navbar/Navbar";
 // import Card from "./components/Card/Card" 
 // import Home from "./components/homee/Home";
 // import SignupPage from "./components/SignupPage/SignupPage";
-import Slider from './components/Slider/Slider';
+// import Slider from './components/Slider/Slider';
 
-function App() {
-  const cardContent = [
-    'Rawand',
-    'Rawand',
-    'Rawand',
+// function App() {
+//   const cardContent = [
+//     'Rawand',
+//     'Rawand',
+//     'Rawand',
 
-  ];
-  return (
-    <div className="App">
+//   ];
+//   return (
+//     <div className="App">
       
-      <Navbar/>
-      {/* <Card/> */}
-      {/* <Home/> */}
-      {/* <SignupPage/> */}
-      <Slider cards={cardContent} />
+//       <Navbar/>
+//       <Card/>
+//       <Home/>
+//       <SignupPage/>
+//       <Slider cards={cardContent} />
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 // import React from 'react';
@@ -66,6 +66,71 @@ export default App;
 // import Admin from './components/Admin/Admin';
 // import Sidebar from './components/Sidebar/Sidebar';
 // import Header from './components/Header/Header';
+
+
+import React from "react";
+import { AuthProvider } from "./components/auth";
+import { Route, Router, Routes } from "react-router-dom"; 
+
+import { Home } from "./components/Home";
+import { NavigationBar } from "./components/NavigationBar";
+// import { NextPage } from "./components/NextPage";
+import { NotMatch } from "./components/NotMatch";
+// import { Products } from "./components/Products";
+// import { FeaturedProducts } from "./components/FeaturedProducts";
+// import { NewProducts } from "./components/NewProducts";
+// import { Users } from "./components/Users";
+// import { UserDetails } from "./components/UserDetails";
+import { Admin } from "./components/Admin";
+import { Profile } from "./components/Profile";
+import Login from "./components/Login";
+
+function App() {
+  return (
+    <AuthProvider>
+      <NavigationBar />
+      <Router>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="about"
+          element={
+            <React.Suspense fallback="Loading...">
+            </React.Suspense>
+          }
+        />
+         {/* <Route path="nextPage" element={<NextPage />} /> 
+        <Route path="products" element={<Products />}>
+          <Route index element={<FeaturedProducts />} />
+          <Route path="features" element={<FeaturedProducts />} />
+          <Route path="new" element={<NewProducts />} />
+        </Route> 
+        <Route path="users" element={<Users />}>
+          <Route path=":userId" element={<UserDetails />} /> */}
+          <Route path="admin" element={<Admin />} />
+        {/* </Route> */}
+        
+        <Route path="profile" element={
+        <Profile />} />
+
+        <Route path="login" element={<Login />} />
+        <Route path="*" element={<NotMatch />} />
+      </Router>
+    </AuthProvider>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
 
 // const App = () => {
 //   return (
